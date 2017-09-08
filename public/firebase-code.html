@@ -1,0 +1,103 @@
+<!doctype html>
+
+<html lang="en" class="minimal-style is-menu-fixed is-always-fixed is-selection-shareable blog-animated header-light header-small" data-effect="slideUp">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+    <meta name="keywords" content="personal, blog, html5">
+    <meta name="author" content="Siri">
+    <title>Sireesha- Writer, Blogger and Traveler</title>
+
+    <!-- FAV and TOUCH ICONS -->
+    <link rel="shortcut icon" href="images/aboutme.png">
+    <link rel="apple-touch-icon" href="images/ico/apple-touch-icon.png"/>
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans:400,400i,700,700i|Poppins:300,400,500,600,700" rel="stylesheet">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts/fontello/css/fontello.css">
+    <link rel="stylesheet" type="text/css" href="js/jquery.magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="js/jquery.fluidbox/fluidbox.css">
+    <link rel="stylesheet" type="text/css" href="js/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="js/selection-sharer/selection-sharer.css">
+    <link rel="stylesheet" type="text/css" href="css/rotate-words.css">
+    <link rel="stylesheet" type="text/css" href="css/align.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="js/shortcodes/shortcodes.css">
+    <link rel="stylesheet" type="text/css" href="css/768.css">
+    <link rel="stylesheet" type="text/css" href="css/992.css">
+
+    <!-- INITIAL SCRIPTS -->
+	<script src="js/modernizr.min.js"></script>
+
+</head>
+
+<body class="page">
+  <textarea rows="4" cols="50" id="about-us">
+  </textarea>
+  <button id="submit" runat="server" class="btn btn-default" style="width: 100%">
+      Submit
+  </button>
+
+    <!-- SCRIPTS -->
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+    apiKey: "AIzaSyAaJGugfXz4iOjFXyMdbMXpODFC9VMFnjY",
+    authDomain: "portfolio-e7b96.firebaseapp.com",
+    databaseURL: "https://portfolio-e7b96.firebaseio.com",
+    projectId: "portfolio-e7b96",
+    storageBucket: "portfolio-e7b96.appspot.com",
+    messagingSenderId: "645138859442"
+    };
+    firebase.initializeApp(config);
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+     if (!window.jQuery) {
+      document.write('<script src="js/jquery-3.1.1.min.js"><\/script>');
+    }
+    </script>
+    <script>
+    $(document).ready(function(){
+        function writeUserData(aboutme) {
+          firebase.database().ref('aboutme').set({
+            aboutme: aboutme,
+          });
+        }
+        $("#submit").click(function(){
+          var aboutme = $("#about-us").val();
+          writeUserData(aboutme);
+        });
+    });
+    </script>
+
+    <script src="js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/jquery.viewport.mini.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery-validation/jquery.validate.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.fluidbox/jquery.fluidbox.min.js"></script>
+    <script src="js/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/selection-sharer/selection-sharer.js"></script>
+    <script src="js/socialstream.jquery.js"></script>
+    <script src="js/jquery.collagePlus/jquery.collagePlus.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/shortcodes/shortcodes.js"></script>
+
+</body>
+</html>
