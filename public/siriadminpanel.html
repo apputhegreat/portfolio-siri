@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html lang="en" class="minimal-style is-menu-fixed is-always-fixed is-selection-shareable blog-animated header-light header-small" data-effect="slideUp">
+<head>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div class="container col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4">
+    <br />
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h1>Login</h1>
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-user" style="width: auto"></i>
+                    </span>
+                    <input id="txtusername" type="text" class="form-control" name="user" placeholder="Username" required="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-lock" style="width: auto"></i>
+                    </span>
+                    <input id="txtpassword" type="password" class="form-control" name="password" placeholder="Password" required="" />
+                </div>
+            </div>
+            <button id="btnLogin" runat="server" class="btn btn-default" style="width: 100%">
+                Login
+            </button>
+        </div>
+    </div>
+</div>
+<script>
+$(document).ready(function(){
+  // $("#btnLogin").click(function(){
+  //   var email = $('#txtusername').val();
+  //   var password = $('#txtpassword').val();
+  //   firebase.auth().signInWithEmailAndPassword(email, password).then(function(user){
+  //     console.log(user);
+  //     window.open('index.html', "_self");
+  //   }).catch(function(error) {
+  //     // Handle Errors here.
+  //     var errorCode = error.code;
+  //     var errorMessage = error.message;
+  //     if (errorCode === 'auth/wrong-password') {
+  //             alert('Wrong password.');
+  //           } else {
+  //               alert(errorMessage);
+  //             }
+  //   console.log(error);
+  //   });
+  // });
+});
+
+</script>
+</body>
+</html>
